@@ -1,0 +1,242 @@
+<div class="container mt-4 ml-5">
+  <!--4 edge -->
+  <div class="row align-items-center box" style="border-radius: 2rem">
+    <div class="col-lg-3">
+      <img
+        src="../../assets/r2e.png"
+        alt="rectangle"
+        style="
+          width: 16rem;
+
+          background-color: rgb(85, 85, 85);
+          border-radius: 2rem;
+        "
+      />
+    </div>
+    <div class="col-lg-3" style="text-align: center">
+      <h6 class="mb-4" style="color: white">
+        Circumfrence And Area Of A Rectangle
+      </h6>
+      <form [formGroup]="elementsOfRectangle">
+        <input
+          type="number"
+          class="form-control"
+          placeholder="Edge 1"
+          formControlName="edge1"
+        />
+
+        <input
+          type="number"
+          class="form-control mt-2"
+          placeholder="Edge 2"
+          formControlName="edge2"
+        />
+
+        <button
+          type="button"
+          class="btn btn-secondary btn mt-2"
+          (click)="calculateRectangle()"
+        >
+          Calculate
+        </button>
+      </form>
+    </div>
+    <div class="col-lg-6">
+      <div>
+        <p class="text-white">
+          Area = <span>{{ area1 }}</span>
+        </p>
+        <p class="text-white">
+          Circumference= <span>{{ perimeter1 }}</span>
+        </p>
+      </div>
+    </div>
+  </div>
+
+  <!--Parallel-->
+  <div class="row align-items-center box" style="border-radius: 2rem">
+    <div class="col-lg-3">
+      <img
+        src="../../assets/p1e1h.png"
+        alt="parallel"
+        style="
+          width: 16rem;
+
+          background-color: rgb(85, 85, 85);
+          border-radius: 2rem;
+        "
+      />
+    </div>
+    <div class="col-lg-3" style="text-align: center">
+      <h6 class="mb-4" style="color: white">
+        Circumfrence And Area Of A Parallel
+      </h6>
+      <form [formGroup]="elementsOfRectangle">
+        <input
+          type="number"
+          class="form-control"
+          placeholder="Edge 1"
+          formControlName="edge1"
+        />
+
+        <input
+          type="number"
+          class="form-control mt-2"
+          placeholder="Edge 2"
+          formControlName="edge2"
+        />
+        <input
+          type="number"
+          class="form-control mt-2"
+          placeholder="Height"
+          formControlName="height1"
+        />
+
+        <button
+          type="button"
+          class="btn btn-secondary btn mt-2"
+          (click)="calculateParallelEdge()"
+        >
+          Calculate
+        </button>
+      </form>
+    </div>
+    <div class="col-lg-6">
+      <div>
+        <p class="text-white">
+          Area = <span>{{ area2 }}</span>
+        </p>
+        <p class="text-white">
+          Circumference= <span>{{ perimeter2 }}</span>
+        </p>
+      </div>
+    </div>
+  </div>
+  <!--Trapezoid-->
+  <div class="row align-items-center box" style="border-radius: 2rem">
+    <div class="col-lg-3">
+      <img
+        src="../../assets/t4e1h.png"
+        alt="trapezoid"
+        style="
+          width: 16rem;
+
+          background-color: rgb(85, 85, 85);
+          border-radius: 2rem;
+        "
+      />
+    </div>
+    <div class="col-lg-3" style="text-align: center">
+      <h6 class="mb-2" style="color: white">
+        Circumfrence And Area Of A Trapezoid
+      </h6>
+      <form [formGroup]="elementsOfRectangle">
+        <input
+          type="number"
+          class="form-control mt-1"
+          placeholder="Edge 1"
+          formControlName="edge1"
+        />
+        <input
+          type="number"
+          class="form-control mt-1"
+          placeholder="Edge 2"
+          formControlName="edge2"
+        />
+        <input
+          type="number"
+          class="form-control mt-1"
+          placeholder="Edge 3"
+          formControlName="edge3"
+        />
+        <input
+          type="number"
+          class="form-control mt-1"
+          placeholder="Edge 4"
+          formControlName="edge4"
+        />
+
+        <input
+          type="number"
+          class="form-control mt-1"
+          placeholder="Height 1"
+          formControlName="height1"
+        />
+
+        <button
+          type="button"
+          class="btn btn-secondary btn mt-2"
+          (click)="calculateTrapezoid()"
+        >
+          Calculate
+        </button>
+      </form>
+    </div>
+    <div class="col-lg-6">
+      <div>
+        <p class="text-white">
+          Area = <span>{{ area3 }}</span>
+        </p>
+        <p class="text-white">
+          Circumference= <span>{{ perimeter3 }}</span>
+        </p>
+      </div>
+    </div>
+  </div>
+  <!--Area with Diagonals-->
+  <div class="row align-items-center box" style="border-radius: 2rem">
+    <div class="col-lg-3">
+      <img
+        src="../../assets/d1d2.png"
+        alt="diagonals"
+        style="
+          width: 16rem;
+
+          background-color: rgb(85, 85, 85);
+          border-radius: 2rem;
+        "
+      />
+    </div>
+    <div class="col-lg-3" style="text-align: center">
+      <h6 class="mb-4" style="color: white">
+        Area Of A Rectangle With Diagonals
+      </h6>
+      <form [formGroup]="elementsOfRectangle">
+        <input
+          type="number"
+          class="form-control"
+          placeholder="Diagonal 1"
+          formControlName="diagonal1"
+        />
+
+        <input
+          type="number"
+          class="form-control mt-2"
+          placeholder="Diagonal 2"
+          formControlName="diagonal2"
+        />
+        <input
+          type="number"
+          class="form-control mt-2"
+          placeholder="Angle"
+          formControlName="angle"
+        />
+
+        <button
+          type="button"
+          class="btn btn-secondary btn mt-2"
+          (click)="calculateAreaWithDiagonals()"
+        >
+          Calculate
+        </button>
+      </form>
+    </div>
+    <div class="col-lg-6">
+      <div>
+        <p class="text-white">
+          Area = <span>{{ area4 }}</span>
+        </p>
+      </div>
+    </div>
+  </div>
+</div>

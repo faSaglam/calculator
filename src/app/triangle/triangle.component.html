@@ -1,0 +1,168 @@
+<div class="container mt-4 ml-5">
+  <!--3 edge -->
+  <div class="row align-items-center box" style="border-radius: 2rem">
+    <div class="col-lg-3">
+      <img
+        src="../../assets//triangle3edge.png"
+        alt="ellipse"
+        style="
+          width: 16rem;
+
+          background-color: rgb(85, 85, 85);
+          border-radius: 2rem;
+        "
+      />
+    </div>
+    <div class="col-lg-3" style="text-align: center">
+      <h6 class="mb-4" style="color: white">
+        Circumfrence and Area of A Triangle Which Knowns 3 Edges
+      </h6>
+      <form [formGroup]="calculateTriangle">
+        <input
+          type="number"
+          class="form-control"
+          placeholder="Edge 1"
+          formControlName="edge1"
+        />
+
+        <input
+          type="number"
+          class="form-control mt-2"
+          placeholder="Edge 2"
+          formControlName="edge2"
+        />
+        <input
+          type="number"
+          class="form-control mt-2"
+          placeholder="Edge 3"
+          formControlName="edge3"
+        />
+
+        <button
+          type="button"
+          class="btn btn-secondary btn mt-2"
+          (click)="calculate3Edge()"
+        >
+          Calculate
+        </button>
+      </form>
+    </div>
+    <div class="col-lg-6">
+      <div>
+        <p class="text-white">
+          Area = <span>{{ area1 }}</span>
+        </p>
+        <p class="text-white">
+          Circumference= <span>{{ perimeter1 }}</span>
+        </p>
+      </div>
+    </div>
+  </div>
+
+  <!--2 edge 1 angle-->
+  <div class="row align-items-center box" style="border-radius: 2rem">
+    <div class="col-lg-3">
+      <img
+        src="../../assets/t2e1a.png"
+        alt="ellipse"
+        style="
+          width: 16rem;
+
+          background-color: rgb(85, 85, 85);
+          border-radius: 2rem;
+        "
+      />
+    </div>
+    <div class="col-lg-3" style="text-align: center">
+      <h6 class="mb-4" style="color: white">
+        Area of A Triangle Which Knowns 2 Edges and 1 Angle
+      </h6>
+      <form [formGroup]="calculateTriangle">
+        <input
+          type="number"
+          class="form-control"
+          placeholder="Edge 1"
+          formControlName="edge1"
+        />
+
+        <input
+          type="number"
+          class="form-control mt-2"
+          placeholder="Edge 2"
+          formControlName="edge2"
+        />
+        <input
+          type="number"
+          class="form-control mt-2"
+          placeholder="Angle"
+          formControlName="angle3"
+        />
+
+        <button
+          type="button"
+          class="btn btn-secondary btn mt-2"
+          (click)="calculate2Edge1Angle()"
+        >
+          Calculate
+        </button>
+      </form>
+    </div>
+    <div class="col-lg-6">
+      <div>
+        <p class="text-white">
+          Area = <span>{{ area2 }}</span>
+        </p>
+      </div>
+    </div>
+  </div>
+  <!--1 edge 1 height-->
+  <div class="row align-items-center box" style="border-radius: 2rem">
+    <div class="col-lg-3">
+      <img
+        src="../../assets/t1e1h.png"
+        alt="ellipse"
+        style="
+          width: 16rem;
+
+          background-color: rgb(85, 85, 85);
+          border-radius: 2rem;
+        "
+      />
+    </div>
+    <div class="col-lg-3" style="text-align: center">
+      <h6 class="mb-4" style="color: white">
+        Area of A Triangle Which Knowns 1 Edges and Height
+      </h6>
+      <form [formGroup]="calculateTriangle">
+        <input
+          type="number"
+          class="form-control"
+          placeholder="Edge 1"
+          formControlName="edge1"
+        />
+
+        <input
+          type="number"
+          class="form-control mt-2"
+          placeholder="Height 1"
+          formControlName="height1"
+        />
+
+        <button
+          type="button"
+          class="btn btn-secondary btn mt-2"
+          (click)="calculate1Edge1Heigth()"
+        >
+          Calculate
+        </button>
+      </form>
+    </div>
+    <div class="col-lg-6">
+      <div>
+        <p class="text-white">
+          Area = <span>{{ area3 }}</span>
+        </p>
+      </div>
+    </div>
+  </div>
+</div>

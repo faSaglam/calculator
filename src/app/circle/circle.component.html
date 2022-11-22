@@ -1,0 +1,117 @@
+<div class="container mt-4 ml-5">
+  <div class="row align-items-center box" style="border-radius: 2rem">
+    <div class="col-lg-3">
+      <img src="../../assets/circle.png" alt="circle" style="width: 16rem" />
+    </div>
+    <div class="col-lg-3" style="text-align: center">
+      <h6 class="mb-4" style="color: white">
+        Circumfrence and Area of A Circle
+      </h6>
+      <form [formGroup]="calculateCircle">
+        <input
+          type="number"
+          class="form-control"
+          placeholder="Enter a value"
+          formControlName="diameter"
+        />
+        <div class="form-check form-check-inline">
+          <input
+            class="form-check-input"
+            type="radio"
+            name="isDiameter"
+            id="flexRadioDefault1"
+            formControlName="isDiameter"
+            [value]="true"
+          />
+          <label class="form-check-label text-white" for="flexRadioDefault1">
+            Diameter
+          </label>
+        </div>
+
+        <div class="form-check form-check-inline mt-3">
+          <input
+            class="form-check-input"
+            type="radio"
+            name="isDiameter"
+            id="flexRadioDefault2"
+            formControlName="isDiameter"
+            [value]="false"
+          />
+          <label class="form-check-label text-white" for="flexRadioDefault2">
+            Radius
+          </label>
+        </div>
+        <button
+          type="button"
+          class="btn btn-secondary btn"
+          (click)="calculate()"
+        >
+          Calculate
+        </button>
+      </form>
+    </div>
+    <div class="col-lg-6">
+      <div>
+        <p class="text-white">
+          Area = <span>{{ area }}</span>
+        </p>
+        <p class="text-white">
+          Circumference= <span>{{ circumference }}</span>
+        </p>
+      </div>
+    </div>
+  </div>
+  <!--ellipse-->
+  <div class="row align-items-center box" style="border-radius: 2rem">
+    <div class="col-lg-3">
+      <img
+        src="../../assets/elipse.png"
+        alt="ellipse"
+        style="
+          width: 16rem;
+
+          background-color: rgb(85, 85, 85);
+          border-radius: 2rem;
+        "
+      />
+    </div>
+    <div class="col-lg-3" style="text-align: center">
+      <h6 class="mb-4" style="color: white">
+        Circumfrence and Area of A Ellipse
+      </h6>
+      <form [formGroup]="calculateEllipse">
+        <input
+          type="number"
+          class="form-control"
+          placeholder="Minor Axis"
+          formControlName="minorAxis"
+        />
+
+        <input
+          type="number"
+          class="form-control mt-2"
+          placeholder="Major Axis"
+          formControlName="majorAxis"
+        />
+
+        <button
+          type="button"
+          class="btn btn-secondary btn mt-2"
+          (click)="calculateE()"
+        >
+          Calculate
+        </button>
+      </form>
+    </div>
+    <div class="col-lg-6">
+      <div>
+        <p class="text-white">
+          Area = <span>{{ areaEllipse }}</span>
+        </p>
+        <p class="text-white">
+          Circumference= <span>{{ circumferenreEllipse }}</span>
+        </p>
+      </div>
+    </div>
+  </div>
+</div>

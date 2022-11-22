@@ -1,0 +1,23 @@
+.box{
+    max-width:100% ;
+    height: 300px;
+    margin-top: 1.5rem;
+    border-radius: 1.5rem;
+    background-color: rgb(1, 1, 1);
+    padding: 1rem;
+}
+@media only screen and (max-width:992px) {
+   .box{
+    height: fit-content;
+   
+   }
+    
+}
+@media only screen and (max-width:726px) {
+    .box{
+     height: fit-content;
+     margin-left:4rem;
+    
+    }
+     
+ }

@@ -1,0 +1,39 @@
+.calculator{
+    
+    width: 50%;
+    padding: 20px 30px;
+    
+    margin: auto;
+    margin-top: 100px;
+
+
+
+    background: radial-gradient(
+      circle,
+      rgb(1, 1, 1) 73%,
+      rgb(50, 50, 50) 100%
+    );
+    border-radius: 15px;
+  
+    
+
+}
+@media only screen and (max-width:992px) {
+    .calculator{
+     width: 60%;
+     margin-left: 15px;
+     padding: 10px 15px;
+    
+    }
+     
+ }
+ @media only screen and (max-width:650px) {
+    .calculator{
+     width: 80%;
+     margin-left: 100px;
+     padding: 20px 15px;
+    
+    }
+     
+ }
+ 

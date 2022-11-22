@@ -1,0 +1,134 @@
+<div class="container-sm" style="width: 100%; height: 100%">
+  <div class="calculator">
+    <div class="row">
+      <div class="d-grid col-12 mx-auto">
+        <input
+          type="text"
+          class="form-control form-control-lg"
+          disabled="disabled"
+          style="padding: 10px 10px; margin-bottom: 10px"
+          [(ngModel)]="show"
+        />
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-3" *ngFor="let num of numbers1">
+        <button
+          (click)="writeToInput(num)"
+          type="button"
+          class="btn btn-dark btn-lg"
+          style="margin-top: 15px; width: 100%"
+        >
+          {{ num }}
+        </button>
+      </div>
+      <div class="col-3">
+        <button
+          type="button"
+          class="btn btn-warning btn-lg"
+          style="margin-top: 15px; width: 100%"
+          (click)="writeToInput('+')"
+        >
+          +
+        </button>
+      </div>
+      <div class="col-3" *ngFor="let num of numbers2">
+        <button
+          (click)="writeToInput(num)"
+          type="button"
+          class="btn btn-dark btn-lg"
+          style="margin-top: 15px; width: 100%"
+        >
+          {{ num }}
+        </button>
+      </div>
+      <div class="col-3">
+        <button
+          type="button"
+          class="btn btn-warning btn-lg"
+          style="margin-top: 15px; width: 100%"
+          (click)="writeToInput('-')"
+        >
+          -
+        </button>
+      </div>
+      <div class="col-3" *ngFor="let num of numbers3">
+        <button
+          (click)="writeToInput(num)"
+          type="button"
+          class="btn btn-dark btn-lg"
+          style="margin-top: 15px; width: 100%"
+        >
+          {{ num }}
+        </button>
+      </div>
+      <div class="col-3">
+        <button
+          type="button"
+          class="btn btn-warning btn-lg"
+          style="margin-top: 15px; width: 100%"
+          (click)="writeToInput('*')"
+        >
+          x
+        </button>
+      </div>
+      <div class="col-3" *ngFor="let num of numbers4">
+        <button
+          (click)="writeToInput(num)"
+          type="button"
+          class="btn btn-dark btn-lg"
+          style="margin-top: 15px; width: 100%"
+        >
+          {{ num }}
+        </button>
+      </div>
+      <div class="col-3">
+        <button
+          type="button"
+          class="btn btn-warning btn-lg"
+          style="margin-top: 15px; width: 100%"
+          (click)="writeToInput('/')"
+        >
+          /
+        </button>
+      </div>
+      <div class="col-4">
+        <button
+          type="button"
+          class="btn btn-warning btn-lg"
+          style="margin-top: 20px; width: 100%"
+          (click)="clear()"
+        >
+          C
+        </button>
+      </div>
+
+      <div class="col-4">
+        <button
+          type="button"
+          class="btn btn-dark btn-lg"
+          style="margin-top: 20px; width: 100%"
+          (click)="writeToInput('.')"
+        >
+          .
+        </button>
+      </div>
+      <div class="col-4">
+        <button
+          type="button"
+          class="btn btn-warning btn-lg"
+          style="margin-top: 20px; width: 100%"
+          (click)="back()"
+        >
+          Back
+        </button>
+      </div>
+    </div>
+
+    <div class="d-grid gap-1 col-sm-12 mx-auto mt-3" style="width: 100%">
+      <button type="button" class="btn btn-success btn-lg" (click)="equals()">
+        =
+      </button>
+    </div>
+  </div>
+</div>

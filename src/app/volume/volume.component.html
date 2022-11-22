@@ -1,0 +1,202 @@
+<div class="container mt-4 ml-5">
+  <!--Rectangular-->
+  <div class="row align-items-center box" style="border-radius: 2rem">
+    <div class="col-lg-3">
+      <img
+        src="../../assets/rp.png"
+        alt="rectangle"
+        style="
+          width: 16rem;
+
+          background-color: rgb(85, 85, 85);
+          border-radius: 2rem;
+        "
+      />
+    </div>
+    <div class="col-lg-3" style="text-align: center">
+      <h6 class="mb-4" style="color: white">Volume of A Rectangular Prism</h6>
+      <form [formGroup]="elementsOfPyrism">
+        <input
+          type="number"
+          class="form-control"
+          placeholder="Edge 1"
+          formControlName="edge1"
+        />
+
+        <input
+          type="number"
+          class="form-control mt-2"
+          placeholder="Edge 2"
+          formControlName="edge2"
+        />
+        <input
+          type="number"
+          class="form-control mt-2"
+          placeholder="Edge 2"
+          formControlName="edge3"
+        />
+
+        <button
+          type="button"
+          class="btn btn-secondary btn mt-2"
+          (click)="VolumeOfRectanguler()"
+        >
+          Calculate
+        </button>
+      </form>
+    </div>
+    <div class="col-lg-6">
+      <div>
+        <p class="text-white">
+          Volume= <span>{{ rectengularPrismVolume }}</span>
+        </p>
+      </div>
+    </div>
+  </div>
+
+  <!--Pyramid-->
+  <div class="row align-items-center box" style="border-radius: 2rem">
+    <div class="col-lg-3">
+      <img
+        src="../../assets/pryamid.png"
+        alt="parallel"
+        style="
+          width: 16rem;
+
+          background-color: rgb(85, 85, 85);
+          border-radius: 2rem;
+        "
+      />
+    </div>
+    <div class="col-lg-3" style="text-align: center">
+      <h6 class="mb-4" style="color: white">Volume of A Pyramid</h6>
+      <form [formGroup]="elementsOfPyrism">
+        <input
+          type="number"
+          class="form-control"
+          placeholder="Edge 1"
+          formControlName="edge1"
+        />
+
+        <input
+          type="number"
+          class="form-control mt-2"
+          placeholder="Edge 2"
+          formControlName="edge2"
+        />
+        <input
+          type="number"
+          class="form-control mt-2"
+          placeholder="Height"
+          formControlName="height"
+        />
+
+        <button
+          type="button"
+          class="btn btn-secondary btn mt-2"
+          (click)="VolumeOfPyramid()"
+        >
+          Calculate
+        </button>
+      </form>
+    </div>
+    <div class="col-lg-6">
+      <div>
+        <p class="text-white">
+          Volume = <span>{{ pyramidVolume }}</span>
+        </p>
+      </div>
+    </div>
+  </div>
+  <!--Cone-->
+  <div class="row align-items-center box" style="border-radius: 2rem">
+    <div class="col-lg-3">
+      <img
+        src="../../assets/cone.png"
+        alt="trapezoid"
+        style="
+          width: 16rem;
+
+          background-color: rgb(85, 85, 85);
+          border-radius: 2rem;
+        "
+      />
+    </div>
+    <div class="col-lg-3" style="text-align: center">
+      <h6 class="mb-4" style="color: white">Volume of A Cone</h6>
+      <form [formGroup]="elementsOfPyrism">
+        <input
+          type="number"
+          class="form-control mt-2"
+          placeholder="Radius"
+          formControlName="radius"
+        />
+
+        <input
+          type="number"
+          class="form-control mt-2"
+          placeholder="Height"
+          formControlName="height"
+        />
+
+        <button
+          type="button"
+          class="btn btn-secondary btn mt-2"
+          (click)="VolumeOfCone()"
+        >
+          Calculate
+        </button>
+      </form>
+    </div>
+    <div class="col-lg-6">
+      <div>
+        <p class="text-white">
+          Volume = <span>{{ coneVolume }}</span>
+        </p>
+      </div>
+    </div>
+  </div>
+  <!--Sphere-->
+  <div class="row align-items-center box" style="border-radius: 2rem">
+    <div class="col-lg-3">
+      <img
+        src="../../assets/sphere.png"
+        alt="diagonals"
+        style="
+          width: 16rem;
+
+          background-color: rgb(85, 85, 85);
+          border-radius: 2rem;
+        "
+      />
+    </div>
+    <div class="col-lg-3" style="text-align: center">
+      <form [formGroup]="elementsOfPyrism">
+        <h6 class="mb-4" style="color: white">
+          Volume of A Rectangular Sphere
+        </h6>
+        <input
+          type="number"
+          class="form-control"
+          placeholder="Radius"
+          formControlName="radius"
+        />
+
+        <button
+          type="button"
+          class="btn btn-secondary btn mt-2"
+          (click)="VolumeOfSphere()"
+        >
+          Calculate
+        </button>
+      </form>
+    </div>
+    <div class="col-lg-6">
+      <div>
+        <p class="text-white">
+          Volume = <span>{{ sphereVolume }}</span>
+        </p>
+      </div>
+    </div>
+  </div>
+</div>
