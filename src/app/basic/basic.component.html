@@ -72,6 +72,7 @@
           x
         </button>
       </div>
+
       <div class="col-3" *ngFor="let num of numbers4">
         <button
           (click)="writeToInput(num)"
@@ -82,6 +83,7 @@
           {{ num }}
         </button>
       </div>
+
       <div class="col-3">
         <button
           type="button"
@@ -92,7 +94,7 @@
           /
         </button>
       </div>
-      <div class="col-4">
+      <div class="col-6">
         <button
           type="button"
           class="btn btn-warning btn-lg"
@@ -103,17 +105,7 @@
         </button>
       </div>
 
-      <div class="col-4">
-        <button
-          type="button"
-          class="btn btn-dark btn-lg"
-          style="margin-top: 20px; width: 100%"
-          (click)="writeToInput('.')"
-        >
-          .
-        </button>
-      </div>
-      <div class="col-4">
+      <div class="col-6">
         <button
           type="button"
           class="btn btn-warning btn-lg"

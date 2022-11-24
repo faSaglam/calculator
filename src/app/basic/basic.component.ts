@@ -8,8 +8,8 @@ import { Component, OnInit } from '@angular/core';
 export class BasicComponent implements OnInit {
   numbers1: Array<any> = ['0', '1', '2'];
   numbers2: Array<any> = ['3', '4', '5'];
-  numbers3: Array<any> = ['4', '5', '6'];
-  numbers4: Array<any> = ['7', '8', '9'];
+  numbers3: Array<any> = ['6', '7', '8'];
+  numbers4: Array<any> = ['00', '9', '.'];
   symbols: Array<any> = ['+', '-', '*', '/'];
   show = '0';
   currentValue = '';
